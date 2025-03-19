@@ -1,0 +1,20 @@
+[package]
+name = "poem-typed-multipart-macro"
+version = "0.1.1"
+edition = "2024"
+authors = ["Nils de Groot <nils@peeko.nl>"]
+description = "Typesafe multipart extractor for poem"
+license = "MIT"
+documentation = "https://docs.rs/poem-typed-multipart"
+homepage = "https://github.com/Reclamefolder/poem-typed-multipart"
+repository = "https://github.com/Reclamefolder/poem-typed-multipart"
+
+[lib]
+proc-macro = true
+
+[dependencies]
+syn = "2.0.100"
+quote = "1.0.40"
+proc-macro2 = "1.0.94"
+darling = "0.20.10"
+thiserror = "2.0.12"

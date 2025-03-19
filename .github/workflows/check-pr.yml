@@ -1,0 +1,26 @@
+name: Check pr
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⛲️ Checkout Source
+        uses: actions/checkout@v4
+
+      - name: 🦿 Setup rust
+        uses: moonrepo/setup-rust@v1
+
+      - name: 🦿 Cargo check
+        run: cargo check
+
+      - name: 🦿 Cargo test
+        run: cargo test
